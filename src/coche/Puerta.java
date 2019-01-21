@@ -17,6 +17,7 @@ public class Puerta {
     public Puerta(String id, Ventana ventana) {
         this.id = id;
         this.ventana = ventana;
+        this.isAbierta=false;
     }
 
     public String getId() {

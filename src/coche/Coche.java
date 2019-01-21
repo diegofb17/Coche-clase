@@ -24,6 +24,10 @@ public class Coche {
         this.puertaPiloto = puertaPiloto;
         this.puertaCopiloto = puertaCopiloto;
     }
+    
+    public Coche(){
+        id = "Coche por defecto";
+    }
 
     public String getId() {
         return id;
@@ -95,9 +99,31 @@ public class Coche {
     }
     
     public void arrancar(){
+        // Si no está arrancado
         if(!getMotor().getIsOn()){
             this.motor.arrancar();
         }
     }
+    
+    public void parar(){
+        //Si está arrancado lo para
+        if(this.motor.getIsOn()){
+            this.motor.apagar(); 
+        }
+    }
+    
+    public void bajarVentanillaCopiloto(){
+        if(!this.puertaCopiloto.getVentana().getIsAbierta()){ 
+            this.puertaCopiloto.getVentana().abrir();
+        }
+    }
+    
+    public void llenarRuedaDelanteraDerecha(){
+        if(!this.ruedaDD.getIsInflada()){
+            this.ruedaDD.llenar();
+        }
+    }
+    
+    
     
 }

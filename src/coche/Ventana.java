@@ -26,7 +26,7 @@ public class Ventana {
         this.id = id;
     }
 
-    public boolean isIsAbierta() {
+    public boolean getIsAbierta() {
         return isAbierta;
     }
 
